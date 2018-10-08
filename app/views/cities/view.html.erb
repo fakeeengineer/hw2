@@ -1,0 +1,13 @@
+<% if City.all[@city.to_sym]%>
+<h1> <%= City.all[@city.to_sym].name %></h1>
+	<p>
+		It's <%= @z.population %>°F
+		and it looks like <%= @z.landmark %>
+<%else%>
+<% City.all.values.each do |city| %>   
+	<h1> <%= city.name %></h1>
+	<p>
+		It's <%= city.population %>°F
+		and it looks like <%= city.landmark %> 
+
+<% end %>
